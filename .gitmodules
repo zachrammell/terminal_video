@@ -4,3 +4,6 @@
 [submodule "lib/ncurses"]
 	path = lib/ncurses
 	url = https://github.com/mirror/ncurses.git
+[submodule "lib/wincurses"]
+	path = lib/wincurses
+	url = https://github.com/justinmeza/wincurses.git
