@@ -16,7 +16,7 @@ obj = $(src:./src/%.cpp=$(OUTPUT)objects/%.o)
 LDFLAGS = -lwincurses -L$(OUTPUT)lib
 
 $(EXE): $(obj) $(lib)
->$(CXX) $(CXXFLAGS) -o $@ $^ $(LDFLAGS)
+>$(CXX) $(CXXFLAGS) $^ -o $@ $(LDFLAGS)
 
 $(obj) : $(src)
 >$(CXX) $(CXXFLAGS) -c -o $@ $^
