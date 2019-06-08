@@ -18,8 +18,8 @@ LDFLAGS = -lwincurses -L$(OUTPUT)lib
 $(EXE): $(obj) $(lib)
 >$(CXX) $(CXXFLAGS) $^ -o $@ $(LDFLAGS)
 
-$(obj) : $(src)
->$(CXX) $(CXXFLAGS) -c -o $@ $^
+$(OUTPUT)objects/%.o : ./src/%.cpp
+>$(CXX) $(CXXFLAGS) -c $^ -o $@ 
 
 $(OUTPUT)lib/lib%.a : $(OUTPUT)objects/%.o
 >ar rcs $@ $^
