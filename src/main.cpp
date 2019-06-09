@@ -2,6 +2,7 @@
 
 int main(int argc, char *argv[])
 {
+  (void)argc; (void)argv;
   ////user optionally passes in width and height, tries to fullscreen if args arent sent
   //Video vid(filename, width, height);
   //Renderer ren(vid);
