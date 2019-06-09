@@ -1,4 +1,4 @@
-#include <sdtio.h>
+#include <stdio.h>
 #include <windows.h>
 
 #define KEYPRESSED -32768
