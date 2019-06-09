@@ -6,4 +6,4 @@
 	url = https://github.com/mirror/ncurses.git
 [submodule "lib/wincurses"]
 	path = lib/wincurses
-	url = https://github.com/justinmeza/wincurses.git
+	url = https://github.com/Zardium/wincurses.git
