@@ -4,7 +4,7 @@ OUTPUT=./build/
 
 EXE=$(OUTPUT)tv
 CXX=g++
-CXXFLAGS=-g -Werror -Wall -Wextra -pedantic -std=c++17 -I./src/conio
+CXXFLAGS=-g -Werror -Wall -Wextra -pedantic -std=c++17
 CC=gcc
 
 LIBWINCURSES=./lib/wincurses/
