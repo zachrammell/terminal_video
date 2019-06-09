@@ -1,5 +1,9 @@
 //#include "renderer.h"
 
+extern "C" {
+	#include <wincurses/wincurses.h>
+}
+
 int main(int argc, char *argv[])
 {
   (void)argc; (void)argv;
