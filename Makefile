@@ -12,11 +12,12 @@ LIBWINCURSES=./lib/wincurses/
 lib = $(OUTPUT)lib/libwincurses.a
 src = $(wildcard ./src/*.cpp)
 obj = $(src:./src/%.cpp=$(OUTPUT)objects/%.o)
+obj += $(OUTPUT)objects/wincurses.o
 
 LDFLAGS = -lwincurses -L$(OUTPUT)lib
 
 $(EXE): $(obj) $(lib)
->$(CXX) $(CXXFLAGS) $^ -o $@ $(LDFLAGS)
+>$(CXX) $(CXXFLAGS) -I./src/conio $^ -o $@ $(LDFLAGS)
 
 $(OUTPUT)objects/%.o : ./src/%.cpp
 >$(CXX) $(CXXFLAGS) -I./lib/ -c $^ -o $@ 
