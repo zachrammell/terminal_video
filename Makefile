@@ -4,7 +4,7 @@ OUTPUT=./build/
 
 EXE=$(OUTPUT)tv
 CXX=g++
-CXXFLAGS=-g -Werror -Wall -Wextra -pedantic -std=c++17
+CXXFLAGS=-g -Werror -Wall -Wextra -pedantic -std=c++17 -I./src/conio
 CC=gcc
 
 LIBWINCURSES=./lib/wincurses/
@@ -17,7 +17,7 @@ obj += $(OUTPUT)objects/wincurses.o
 LDFLAGS = -lwincurses -L$(OUTPUT)lib
 
 $(EXE): $(obj) $(lib)
->$(CXX) $(CXXFLAGS) -I./src/conio $^ -o $@ $(LDFLAGS)
+>$(CXX) $(CXXFLAGS) $^ -o $@ $(LDFLAGS)
 
 $(OUTPUT)objects/%.o : ./src/%.cpp
 >$(CXX) $(CXXFLAGS) -I./lib/ -c $^ -o $@ 
