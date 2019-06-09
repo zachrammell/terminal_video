@@ -19,13 +19,13 @@ $(EXE): $(obj) $(lib)
 >$(CXX) $(CXXFLAGS) $^ -o $@ $(LDFLAGS)
 
 $(OUTPUT)objects/%.o : ./src/%.cpp
->$(CXX) $(CXXFLAGS) -c $^ -o $@ 
+>$(CXX) $(CXXFLAGS) -I./lib/ -c $^ -o $@ 
 
 $(OUTPUT)lib/lib%.a : $(OUTPUT)objects/%.o
 >ar rcs $@ $^
 
 $(OUTPUT)objects/wincurses.o : $(LIBWINCURSES)wincurses.c
->$(CC) -c -o $@ $^
+>$(CC) -c $^ -I./src/conio -o $@
 
 .PHONY: clean
 clean:
